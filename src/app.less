@@ -1,0 +1,60 @@
+
+@primary: #60f;
+@secondary: #248;
+
+@font: 'Helvetica', sans-serif;
+
+h1 {
+    color: @secondary;
+    font-family: @font;
+}
+h2 {
+    margin-top: 60px;
+    color: @secondary;
+    font-family: @font;
+}
+hr {
+    &.small {
+        max-width: 100px;
+    }
+}
+
+.navbar {
+    background-color: @primary;
+
+
+    .navbar-nav {
+        &>li {
+            &>a {
+                &>.fa {
+                    .transition-all;
+                    min-width: 18px;
+                }
+
+                color: white;
+                font-weight: 700;
+                font-family: @font;
+                &:hover {
+                    color: darken(white, 10%);
+                    &>.fa {
+                        font-size: 1.2em;
+                    }
+                }
+                &:focus {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    min-height: 15vh;
+}
+
+
+.transition-all() {
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
+}
